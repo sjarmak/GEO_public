@@ -1,0 +1,68 @@
+[
+  {
+    "id": "cat-llms-001",
+    "category": "category_search",
+    "subcategory": "code_search",
+    "prompt": "What are the best tools for searching code across many repositories?",
+    "intent": "Discover code search tools at the category level",
+    "expected_competitors": ["CodeHound", "FindGrep"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["llms_txt", "inclusion"]
+  },
+  {
+    "id": "cat-llms-002",
+    "category": "category_search",
+    "subcategory": "code_search",
+    "prompt": "Which code search tools can be self-hosted, and which offer a free cloud tier?",
+    "intent": "Find code search tools by deployment model and pricing",
+    "expected_competitors": ["CodeHound", "SearchLite"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["llms_txt", "fact:self_hosted", "fact:free_tier"]
+  },
+  {
+    "id": "cmp-llms-001",
+    "category": "comparison",
+    "subcategory": "code_search",
+    "prompt": "How does AcmeSearch differ from CodeHound?",
+    "intent": "Direct head-to-head positioning question",
+    "expected_competitors": ["CodeHound"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["llms_txt", "fact:structural_search", "positioning"]
+  },
+  {
+    "id": "alt-llms-001",
+    "category": "alternative_search",
+    "subcategory": "code_search",
+    "prompt": "What are good alternatives to grep for searching a large codebase spread over hundreds of repositories?",
+    "intent": "Surface indexed search tools as grep replacements",
+    "expected_competitors": ["CodeHound", "FindGrep", "SearchLite"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["llms_txt", "inclusion"]
+  },
+  {
+    "id": "use-llms-001",
+    "category": "use_case",
+    "subcategory": "code_search",
+    "prompt": "My team needs to find every usage of a deprecated function across about 500 repositories. What tool should we use?",
+    "intent": "Concrete cross-repo refactoring use case",
+    "expected_competitors": ["CodeHound", "FindGrep"],
+    "persona": "engineering lead at a mid-size company",
+    "phrasing_variant_of": null,
+    "tags": ["llms_txt", "fact:structural_search", "use_case"]
+  },
+  {
+    "id": "prb-llms-001",
+    "category": "problem_framing",
+    "subcategory": "code_search",
+    "prompt": "Our internal code search is slow and misses results in half our repositories. What kind of tooling should we look at?",
+    "intent": "Problem-first framing with no product named",
+    "expected_competitors": ["CodeHound", "SearchLite"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["llms_txt", "inclusion", "problem_framing"]
+  }
+]

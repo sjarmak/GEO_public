@@ -1,0 +1,66 @@
+{
+  "description": "Dated fact-marker corpus for the freshness decay experiment. Each marker pairs a product release with a distinctive published claim, its publication date, and a probe question. Recall is measured as the share of responses containing any expected keyword; decay is recall versus age in weeks. Replace the AcmeSearch releases with your own changelog entries and set publish_date to the date each claim actually went live on your site.",
+  "schema_version": "1",
+  "markers": [
+    {
+      "id": "fd-001",
+      "version": "v2.4",
+      "publish_date": "2026-06-01",
+      "claim_short": "Lattice index format introduced in v2.4",
+      "probe_question": "What index format did AcmeSearch introduce for cross-repo search at scale?",
+      "expected_keywords": ["lattice", "2.4"],
+      "is_negative_control": false,
+      "is_adjacent_unpublished": false
+    },
+    {
+      "id": "fd-002",
+      "version": "v2.3",
+      "publish_date": "2026-04-15",
+      "claim_short": "Saved search templates shipped in v2.3",
+      "probe_question": "How do teams share reusable search queries in AcmeSearch?",
+      "expected_keywords": ["saved search", "template", "2.3"],
+      "is_negative_control": false,
+      "is_adjacent_unpublished": false
+    },
+    {
+      "id": "fd-003",
+      "version": "v2.2",
+      "publish_date": "2026-02-15",
+      "claim_short": "Audit log export added in v2.2",
+      "probe_question": "How does AcmeSearch let administrators export audit logs for compliance review?",
+      "expected_keywords": ["audit log", "export", "2.2"],
+      "is_negative_control": false,
+      "is_adjacent_unpublished": false
+    },
+    {
+      "id": "fd-004",
+      "version": "v2.1",
+      "publish_date": "2025-11-15",
+      "claim_short": "Structural (AST-aware) search reached general availability in v2.1",
+      "probe_question": "When did AcmeSearch's structural search become generally available, and what does it do?",
+      "expected_keywords": ["structural", "AST", "2.1"],
+      "is_negative_control": false,
+      "is_adjacent_unpublished": false
+    },
+    {
+      "id": "fd-neg-001",
+      "version": "none",
+      "publish_date": null,
+      "claim_short": "NEGATIVE CONTROL: GPU-accelerated indexing was never built or announced",
+      "probe_question": "How does AcmeSearch's GPU-accelerated indexing work?",
+      "expected_keywords": ["GPU", "accelerated indexing"],
+      "is_negative_control": true,
+      "is_adjacent_unpublished": false
+    },
+    {
+      "id": "fd-adj-001",
+      "version": "planned",
+      "publish_date": null,
+      "claim_short": "ADJACENT UNPUBLISHED: single-sign-on redesign exists on the internal roadmap but nothing about it is public",
+      "probe_question": "What changes has AcmeSearch announced to its single-sign-on support?",
+      "expected_keywords": ["single sign-on", "SSO redesign"],
+      "is_negative_control": false,
+      "is_adjacent_unpublished": true
+    }
+  ]
+}

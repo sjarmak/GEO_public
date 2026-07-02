@@ -1,0 +1,79 @@
+[
+  {
+    "id": "cmp-bt-001",
+    "category": "comparison",
+    "subcategory": "code_search",
+    "prompt": "Compare AcmeSearch, CodeHound, and FindGrep for a 200-developer engineering organization.",
+    "intent": "Broad three-way comparison with buyer intent",
+    "expected_competitors": ["CodeHound", "FindGrep"],
+    "persona": "platform engineering manager",
+    "phrasing_variant_of": null,
+    "tags": ["benchmark_tables", "inclusion"]
+  },
+  {
+    "id": "cmp-bt-002",
+    "category": "comparison",
+    "subcategory": "pricing",
+    "prompt": "Which of AcmeSearch, CodeHound, and FindGrep has a free tier, and what does the cheapest paid plan cost for each?",
+    "intent": "Pricing-cell recall across the comparison set",
+    "expected_competitors": ["CodeHound", "FindGrep"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["benchmark_tables", "fact:pricing", "cell_citation"]
+  },
+  {
+    "id": "cmp-bt-003",
+    "category": "comparison",
+    "subcategory": "features",
+    "prompt": "Which code search tools support structural, AST-aware queries: AcmeSearch, CodeHound, or FindGrep?",
+    "intent": "Capability-matrix cell recall",
+    "expected_competitors": ["CodeHound", "FindGrep"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["benchmark_tables", "fact:structural_search", "cell_citation"]
+  },
+  {
+    "id": "cmp-bt-004",
+    "category": "comparison",
+    "subcategory": "deployment",
+    "prompt": "Does AcmeSearch support self-hosted deployment, and how does that compare with CodeHound?",
+    "intent": "Deployment-model comparison targeting one matrix row",
+    "expected_competitors": ["CodeHound"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["benchmark_tables", "fact:self_hosted", "cell_citation"]
+  },
+  {
+    "id": "cat-bt-001",
+    "category": "category_search",
+    "subcategory": "code_search",
+    "prompt": "What is the best code search tool for a large engineering team, and why?",
+    "intent": "Category question that comparison pages frequently answer",
+    "expected_competitors": ["CodeHound", "FindGrep", "SearchLite"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["benchmark_tables", "inclusion"]
+  },
+  {
+    "id": "alt-bt-001",
+    "category": "alternative_search",
+    "subcategory": "code_search",
+    "prompt": "What are the main alternatives to CodeHound for cross-repo code search?",
+    "intent": "Competitor-anchored alternative search",
+    "expected_competitors": ["CodeHound", "FindGrep", "SearchLite"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["benchmark_tables", "inclusion", "competitor_anchor"]
+  },
+  {
+    "id": "cmp-bt-005",
+    "category": "comparison",
+    "subcategory": "features",
+    "prompt": "Which of AcmeSearch, CodeHound, or FindGrep includes a built-in issue tracker?",
+    "intent": "Negative control: no variant claims an issue tracker for any tool. A confident yes for any product is a hallucination and sets the false-positive floor.",
+    "expected_competitors": ["CodeHound", "FindGrep"],
+    "persona": null,
+    "phrasing_variant_of": null,
+    "tags": ["benchmark_tables", "negative_control"]
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "description": "Presentation-format variants for one comparison page. Each variant states the same underlying facts; only the format (prose vs markdown table) changes. Replace AcmeSearch/CodeHound/FindGrep with your product and competitors, and fill every [FILL] placeholder with facts verified against public documentation.",
+  "page_under_test": {
+    "url_path": "/compare/code-search-tools",
+    "title": "Code Search Tools Compared",
+    "content_invariant_note": "Prose outside the table sections must be byte-identical across variants. Only the comparison sections differ."
+  },
+  "variants": [
+    {
+      "id": "00_control_prose",
+      "label": "Control: prose only",
+      "purpose": "Baseline. All comparison facts stated in sentences, no tables. Every table variant is measured against this.",
+      "content": "## How the tools compare\n\nAcmeSearch supports self-hosted and cloud deployment, with a free cloud tier for up to [FILL: user count] users; paid plans start at [FILL: price] per seat per month. CodeHound is [FILL: deployment model] and starts at [FILL: price] per seat. FindGrep is [FILL: deployment model] with [FILL: pricing summary].\n\nOn capabilities, AcmeSearch offers cross-repo regex search and structural (AST-aware) queries. CodeHound offers [FILL: capability summary]. FindGrep offers [FILL: capability summary].\n"
+    },
+    {
+      "id": "01_features_table",
+      "label": "Capability matrix table",
+      "purpose": "Tests whether a yes/no capability matrix raises inclusion and feature recall versus the same facts in prose.",
+      "content": "## How the tools compare\n\n| Capability | AcmeSearch | CodeHound | FindGrep |\n|---|---|---|---|\n| Cross-repo regex search | Yes | [FILL: Yes/No] | [FILL: Yes/No] |\n| Structural (AST-aware) search | Yes | [FILL: Yes/No] | [FILL: Yes/No] |\n| Self-hosted deployment | Yes | [FILL: Yes/No] | [FILL: Yes/No] |\n| Managed cloud offering | Yes | [FILL: Yes/No] | [FILL: Yes/No] |\n| API access | Yes | [FILL: Yes/No] | [FILL: Yes/No] |\n\nEach cell reflects public product documentation as of [FILL: snapshot date]. Link every non-obvious claim to its source.\n"
+    },
+    {
+      "id": "02_pricing_table",
+      "label": "Pricing table",
+      "purpose": "Tests whether numeric pricing cells raise inclusion and get quoted verbatim in buyer-intent answers.",
+      "content": "## Pricing\n\n| Plan dimension | AcmeSearch | CodeHound | FindGrep |\n|---|---|---|---|\n| Free tier | Cloud, up to [FILL] users | [FILL] | [FILL] |\n| Entry paid tier (per seat/month) | [FILL: price] | [FILL: price] | [FILL: price] |\n| Enterprise | Contact sales | [FILL] | [FILL] |\n| Self-hosted license | [FILL] | [FILL] | [FILL] |\n\nPrices from public pricing pages, snapshot [FILL: snapshot date]. Update the snapshot date whenever a vendor changes pricing.\n"
+    }
+  ]
+}

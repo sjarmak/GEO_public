@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest tests/ -q
+
+      - name: Mock smoke run and dashboard build
+        run: |
+          python -m geo.runner --corpus prompts/seed_corpus.json --dry-run --reps 2 --experiment ci_smoke
+          python -m geo.dashboard --experiment ci_smoke
+          test -s results/reports/ci_smoke_report.html

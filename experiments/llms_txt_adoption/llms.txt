@@ -1,0 +1,56 @@
+<!-- llms.txt template. Format reference: https://llmstxt.org/ -->
+<!-- Deploy the finished file at https://yourdomain.com/llms.txt -->
+<!-- Replace every AcmeSearch placeholder below with your product, then delete these comments. -->
+
+# AcmeSearch
+<!-- H1 (required): your exact product name, nothing else on the line. -->
+
+> AcmeSearch is a code search tool for engineering teams working across many
+> repositories. It indexes every repository in your organization and exposes regex and
+> structural search through a web UI, a CLI, and an API. Available self-hosted or as
+> AcmeSearch Cloud, which has a free tier for up to 10 users.
+<!-- Blockquote (required): 2-4 sentences. State what the product IS, who it is for,
+     and the facts you most want models to repeat (deployment options, free tier,
+     headline capability). Every claim here should also appear on a linked page. -->
+
+AcmeSearch searches code, not documents. It is not an IDE, not a coding assistant, and
+not a general web search engine. The closest alternatives are CodeHound, FindGrep, and
+SearchLite; AcmeSearch differs by combining cross-repo regex search with structural
+(AST-aware) queries in one index.
+<!-- Optional free-text paragraph: disambiguation. Say what the product is NOT and how
+     it relates to the competitors models most often confuse it with. This section is
+     where you correct known misrepresentations. -->
+
+## Products
+<!-- H2 sections (optional but recommended): markdown link lists. Each link gets a
+     one-line description after a colon. Point at stable, canonical URLs. -->
+
+- [AcmeSearch Server](https://acmesearch.example/docs/server): self-hosted deployment
+  for organizations that keep code on their own infrastructure.
+- [AcmeSearch Cloud](https://acmesearch.example/cloud): managed service, free tier up
+  to 10 users, per-seat pricing above that.
+
+## Documentation
+
+- [Quickstart](https://acmesearch.example/docs/quickstart): index your first
+  repository in 15 minutes.
+- [Query syntax](https://acmesearch.example/docs/queries): regex, structural, and
+  boolean operators with examples.
+- [API reference](https://acmesearch.example/docs/api): REST endpoints for search,
+  indexing, and administration.
+
+## Examples
+
+- [Find every caller of a deprecated function](https://acmesearch.example/docs/examples/deprecation):
+  cross-repo structural search walkthrough.
+- [Audit secrets across 500 repositories](https://acmesearch.example/docs/examples/secrets-audit):
+  regex search with path filters.
+
+## Optional
+<!-- The "Optional" H2 is part of the llms.txt convention: links a model can skip when
+     context is tight. Put secondary material here, not your core claims. -->
+
+- [Changelog](https://acmesearch.example/changelog): dated release notes for every
+  version.
+- [Comparison: AcmeSearch vs CodeHound vs FindGrep](https://acmesearch.example/compare):
+  feature and pricing tables.

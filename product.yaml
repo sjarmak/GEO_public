@@ -1,0 +1,19 @@
+# Edit this file to point the harness at YOUR product.
+# The values below are a fictional example so the demo works out of the box.
+product:
+  name: AcmeSearch
+  aliases:            # alternate spellings/domains that count as a mention
+    - Acme Search
+    - acmesearch.io
+  category: code search tools   # used by corpus generation and docs
+
+competitors:
+  - name: CodeHound
+    aliases: [codehound.dev]
+  - name: FindGrep
+    aliases: []
+  - name: SearchLite
+    aliases: []
+
+scoring:
+  semantic_judge_model: gpt-4o   # layer-3 LLM judge; requires OPENAI_API_KEY; optional
